@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Adivina el color!</title>
+    <script type="module" src="index.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .text-container {
+            background: #ffffffc0;
+            padding: 8px;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        main p {
+            font-size: 22px;
+        }
+
+        .carts-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cart {
+            text-align: center;
+            border-radius: 20px;
+            padding: 25px;
+            background-color: gray;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .score-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .score-container div span {
+            color: #fff;
+            padding: 10px;
+        }
+
+        #reiniciar-colores,
+        #reiniciar {
+            padding: 10px;
+            margin: 20px 20px 0 0 ;
+        }
+
+        #reiniciar {
+            color: #fff;
+            background-color: rgb(173, 19, 19);
+            padding: 10px;
+            margin: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="text-container">
+            <h1>¡Adivina el color!</h1>
+            <p>Este juego consiste en adivinar el color de cada
+                tarjeta, cada vez que apretes el boton "Cambiar color",
+                se asignara de forma aleatoria un color. Estos son: "rojo",
+                "azul" y "verde". Cada color adivinado le otogara 1 punto y aquel que
+                llegue primero a 5 puntos es el ganador!
+            </p>
+        </div>
+
+        <button id="reiniciar-colores">Reiniciar Colores</button>
+        <div class="carts-container">
+            <div class="cart uno">
+                <h2 class="hUno">Gris</h2>
+                <button class="btnUno">Cambiar color</button>
+            </div>
+            <div class="cart dos">
+                <h2 class="hDos">Gris</h2>
+                <button class="btnDos">Cambiar color</button>
+            </div>
+            <div class="cart tres">
+                <h2 class="hTres">Gris</h2>
+                <button class="btnTres">Cambiar color</button>
+            </div>
+        </div>
+        <div class="score-container">
+            <div>
+                <h2>Jugador 1</h2>
+                <button id="sumar-jugador-1">+</button>
+                <span id="puntos-jugador-1">0</span>
+                <button id="restar-jugador-1">-</button>
+            </div>
+            <div>
+                <h2>Jugador 2</h2>
+                <button id="sumar-jugador-2">+</button>
+                <span id="puntos-jugador-2">0</span>
+                <button id="restar-jugador-2">-</button>
+            </div>
+        </div>
+        <button id="reiniciar">Reiniciar Juego</button>
+    </main>
+
+
+
+</body>
+
+</html>
